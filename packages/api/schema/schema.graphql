@@ -1,0 +1,12 @@
+type Query {
+  """
+  I am testing this query
+  """
+  test: String
+}
+type Mutation {
+  """
+  I am testing this mutation
+  """
+  testing: String
+}

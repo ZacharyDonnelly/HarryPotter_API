@@ -1,0 +1,8 @@
+{
+  "name": "@Harry-Potter/Common",
+  "description": "A modern Harry Potter GraphQL API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hashed <z-donnelly@hvcc.edu>",
+  "license": "BSD-3-Clause"
+}
