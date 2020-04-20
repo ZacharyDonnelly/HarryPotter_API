@@ -1,12 +1,12 @@
 {
   "name": "@Harry-Potter/API",
   "description": "A modern Harry Potter GraphQL API",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "server.js",
   "author": "Hashed <z-donnelly@hvcc.edu>",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "@Harry-Potter/Common": "^1.0.0",
+    "@Harry-Potter/Common": "^1.0.3",
     "apollo-link-http": "^1.5.17",
     "apollo-server": "^2.12.0",
     "cross-env": "^7.0.2",
