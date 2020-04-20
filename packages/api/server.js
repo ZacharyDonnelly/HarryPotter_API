@@ -1,11 +1,11 @@
+// * .env config Related
+require('dotenv').config();
 // * GraphQL Related
 const { importSchema } = require('graphql-import');
 const { ApolloServer } = require('apollo-server');
-const resolvers = require('./resolvers');
-const typeDefs = importSchema('./schema/schema.graphql');
+const resolvers = require('./src/resolvers');
+const typeDefs = importSchema('./src/typeDefs/schema.graphql');
 const depth = require('graphql-depth-limit');
-// * .env config Related
-require('dotenv').config();
 // * Database Related
 const mongoose = require('mongoose');
 

@@ -1,0 +1,60 @@
+type Query {
+  """
+  Get a specific character by ID
+  """
+  character(id: ID): Character
+  """
+  Get the list of all characters
+  """
+  characters(filter: FilterCharacter): Characters
+  """
+  Get the specified house by name
+  """
+  house(name: String): House
+}
+type Characters {
+  results: [Character]
+}
+
+type Character {
+  id: ID!
+  """
+  The name of the character.
+  """
+  name: String
+  """
+  The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
+  """
+  house: House
+  """
+  The actor who plays the character
+  """
+  actor: String
+  """
+  The gender of the character.
+  """
+  gender: String
+  """
+  Link to the character's image.
+  All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.
+  """
+  image: String
+}
+
+type House {
+  """
+  The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
+  """
+  name: String
+  """
+  Get the list of all characters that are part of specified house
+  """
+  characters: [Character]
+}
+
+input FilterCharacter {
+  name: String
+  actor: String
+  house: String
+  gender: String
+}

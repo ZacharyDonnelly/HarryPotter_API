@@ -4,9 +4,4 @@ module.exports = {
       return 'WORKING!';
     },
   },
-  Mutation: {
-    testing() {
-      return 'WORKING X2';
-    },
-  },
 };
