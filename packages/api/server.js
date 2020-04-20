@@ -14,7 +14,7 @@ const server = new ApolloServer({
   resolvers,
   introspection: true,
   playground: true,
-  validationRules: depth(4),
+  validationRules: depth(5),
   context() {
     //code here
   },
