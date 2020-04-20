@@ -4,5 +4,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Hashed <z-donnelly@hvcc.edu>",
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^3.0.0"
+  }
 }
