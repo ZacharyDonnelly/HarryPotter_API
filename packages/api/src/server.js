@@ -1,13 +1,13 @@
 // * .env config Related
 require('dotenv').config();
 // * GraphQL Related
-const { importSchema } = require('graphql-import');
-const { ApolloServer } = require('apollo-server');
-const resolvers = require('./src/resolvers');
+import { importSchema } from 'graphql-import';
+import { ApolloServer } from 'apollo-server';
+import { resolvers } from './resolvers';
+import depth from 'graphql-depth-limit';
 const typeDefs = importSchema('./src/typeDefs/schema.graphql');
-const depth = require('graphql-depth-limit');
 // * Database Related
-const mongoose = require('mongoose');
+const { sequelize } = require('./models');
 
 const server = new ApolloServer({
   typeDefs,
@@ -20,6 +20,8 @@ const server = new ApolloServer({
   },
 });
 
-server.listen().then(({ url }) => {
-  console.log(`Server is ready at ${url}`);
+sequelize.sync().then(() => {
+  server.listen().then(({ url }) => {
+    console.log(`Server is ready at ${url}`);
+  });
 });

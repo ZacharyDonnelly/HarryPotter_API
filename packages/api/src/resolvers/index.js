@@ -1,7 +1,5 @@
-module.exports = {
+export const resolvers = {
   Query: {
-    test() {
-      return 'WORKING!';
-    },
+    // code
   },
 };

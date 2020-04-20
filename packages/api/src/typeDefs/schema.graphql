@@ -27,18 +27,9 @@ type Character {
   """
   house: House
   """
-  The actor who plays the character
-  """
-  actor: String
-  """
   The gender of the character.
   """
   gender: String
-  """
-  Link to the character's image.
-  All images are 300x300px and most are medium shots or portraits since they are intended to be used as avatars.
-  """
-  image: String
 }
 
 type House {
