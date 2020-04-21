@@ -1,16 +1,16 @@
 type Query {
   """
-  Get a specific character by ID
+  Get a specific character by ID (Characters who don't have a recorded house will not be stored)
   """
   character(id: ID): Character
   """
-  Get the list of all characters
+  Get the list of all characters (Characters who don't have a recorded house will not be stored)
   """
   characters(filter: FilterCharacter): Characters
   """
   Get the specified house by name
   """
-  house(name: String): House
+  house(name: String!): House
 }
 type Characters {
   results: [Character]

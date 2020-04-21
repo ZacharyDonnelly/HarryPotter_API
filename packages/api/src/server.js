@@ -8,6 +8,8 @@ import depth from 'graphql-depth-limit';
 const typeDefs = importSchema('./src/typeDefs/schema.graphql');
 // * Database Related
 const { sequelize } = require('./models');
+const { House } = sequelize.models;
+const data = require('@Harry-Potter/Common/data/slytherin.js');
 
 const server = new ApolloServer({
   typeDefs,
@@ -16,7 +18,7 @@ const server = new ApolloServer({
   playground: true,
   validationRules: depth(5),
   context() {
-    //code here
+    return sequelize.models;
   },
 });
 

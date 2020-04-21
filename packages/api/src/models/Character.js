@@ -17,14 +17,6 @@ export default (sequelize) => {
           notEmpty: true,
         },
       },
-      gender: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          notEmpty: true,
-        },
-      },
     },
     {}
   );
