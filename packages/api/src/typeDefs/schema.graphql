@@ -1,23 +1,20 @@
 type Query {
   """
-  Get a specific character by ID (Characters who don't have a recorded house will not be stored)
+  Get a specific character by name (Characters who don't have a recorded house will not be stored)
   """
-  character(id: ID): Character
+  character(name: String!): Character
   """
   Get the list of all characters (Characters who don't have a recorded house will not be stored)
   """
-  characters(filter: FilterCharacter): Characters
+  characters(page: Int, filter: FilterCharacter): [Character]
   """
   Get the specified house by name
   """
   house(name: String!): House
 }
-type Characters {
-  results: [Character]
-}
 
 type Character {
-  id: ID!
+  id: ID
   """
   The name of the character.
   """
@@ -26,10 +23,6 @@ type Character {
   The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
   """
   house: House
-  """
-  The gender of the character.
-  """
-  gender: String
 }
 
 type House {
@@ -44,8 +37,5 @@ type House {
 }
 
 input FilterCharacter {
-  name: String
-  actor: String
   house: String
-  gender: String
 }
