@@ -20,3 +20,11 @@ dump.rdb
 yarn-debug.log*
 yarn-error.log*
 images/
+
+*.db
+development.*
+development.db
+
+/config
+config/*
+/config/*
