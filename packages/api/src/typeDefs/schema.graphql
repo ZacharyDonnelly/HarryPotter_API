@@ -6,7 +6,7 @@ type Query {
   """
   Get the list of all characters (Some Characters who don't have a recorded house will not be stored)
   """
-  characters(page: Int!, filter: FilterCharacter): [Character]
+  characters(page: Int, filter: FilterCharacter): [Character]
   """
   Get the specified Hogwarts house by name
   """
@@ -34,6 +34,7 @@ type Character {
 }
 
 type House {
+  id: ID
   """
   The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
   """
