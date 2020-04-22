@@ -6,7 +6,7 @@ const gryffindorURL = 'https://harrypotter.fandom.com/wiki/Category:Gryffindors'
 const ravenclawURL = 'https://harrypotter.fandom.com/wiki/Category:Ravenclaws';
 const hufflepuffURL = 'https://harrypotter.fandom.com/wiki/Category:Hufflepuffs';
 (async () => {
-  const results = await getResults(slytherinURL);
+  const results = await getResults(hufflepuffURL);
   const jsonString = JSON.stringify(results);
-  fs.writeFileSync('../data/slytherin.json', jsonString, 'utf-8');
+  fs.writeFileSync('../data/hufflepuff.js', jsonString);
 })();
