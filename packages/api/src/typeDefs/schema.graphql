@@ -1,16 +1,20 @@
 type Query {
   """
-  Get a specific character by name (Characters who don't have a recorded house will not be stored)
+  Get a specific character by name (Some Characters who don't have a recorded house will not be stored)
   """
   character(name: String!): Character
   """
-  Get the list of all characters (Characters who don't have a recorded house will not be stored)
+  Get the list of all characters (Some Characters who don't have a recorded house will not be stored)
   """
-  characters(page: Int, filter: FilterCharacter): [Character]
+  characters(page: Int!, filter: FilterCharacter): [Character]
   """
-  Get the specified house by name
+  Get the specified Hogwarts house by name
   """
   house(name: String!): House
+  """
+  Get all Hogwarts houses
+  """
+  houses: [House]
 }
 
 type Character {
@@ -42,4 +46,5 @@ type House {
 
 input FilterCharacter {
   house: String
+  gender: String
 }
