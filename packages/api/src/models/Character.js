@@ -17,11 +17,21 @@ export default (sequelize) => {
           notEmpty: true,
         },
       },
+      house: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false,
+        validate: {
+          notEmpty: true,
+        },
+      },
+      gender: {
+        type: Sequelize.STRING,
+        allowNull: true,
+        unique: false,
+      },
     },
     {}
   );
-  Character.associate = (models) => {
-    Character.belongsTo(models.House);
-  };
   return Character;
 };

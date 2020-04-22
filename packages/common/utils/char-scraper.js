@@ -7,20 +7,21 @@ const fetchData = async (url) => {
 };
 
 const getResults = async (url) => {
-  let hufflepuffCharacters = {};
-  const hufflepuffArray = [];
+  let ravenclawCharacters = {};
+  const ravenclawArray = [];
   const $ = await fetchData(url);
 
   $(
     '.category-page__members > .category-page__members-for-char > .category-page__member > .category-page__member-link'
   ).each((_, element) => {
-    hufflepuffCharacters = {
+    ravenclawCharacters = {
       name: $(element).text(),
-      house: 'Hufflepuff',
+      house: 'Ravenclaw',
+      gender: 'Male',
     };
-    hufflepuffArray.push(hufflepuffCharacters);
+    ravenclawArray.push(ravenclawCharacters);
   });
-  return hufflepuffArray;
+  return ravenclawArray;
 };
 
 module.exports = getResults;

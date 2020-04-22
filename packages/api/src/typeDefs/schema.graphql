@@ -23,6 +23,10 @@ type Character {
   The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
   """
   house: House
+  """
+  The gender of the character.
+  """
+  gender: String
 }
 
 type House {

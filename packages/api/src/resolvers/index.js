@@ -12,17 +12,12 @@ export const resolvers = {
         return;
       }
     },
-    characters: async (_, { page, filter: { house } }, { Character, House }) => {
+    characters: async (_, { page, filter: { house } }, { Character }) => {
       try {
         const offsetCalc = page * 10;
-        const { id } = await House.findOne({
-          where: {
-            name: house,
-          },
-        });
         return await Character.findAll({
           where: {
-            HouseId: id,
+            house,
           },
           limit: 10,
           offset: offsetCalc,
