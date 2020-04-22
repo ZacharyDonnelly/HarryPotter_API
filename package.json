@@ -6,7 +6,7 @@
     "scripts": {
         "test": "lerna run test",
         "dev": "lerna run dev --scope=@Harry-Potter/API",
-        "new-version": "lerna version --conventional-commits --yes --conventional-graduate=@Harry-Potter/API",
+        "new-version": "lerna version",
         "diff": "lerna diff"
     },
     "devDependencies": {
