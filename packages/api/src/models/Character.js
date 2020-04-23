@@ -8,6 +8,11 @@ export default (sequelize) => {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
+        allowNull: false,
+        unique: true,
+        validate: {
+          notEmpty: true,
+        },
       },
       name: {
         type: Sequelize.STRING,
@@ -29,6 +34,14 @@ export default (sequelize) => {
         type: Sequelize.STRING,
         allowNull: true,
         unique: false,
+      },
+      actor: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        unique: false,
+        validate: {
+          notEmpty: true,
+        },
       },
     },
     {}

@@ -7,21 +7,21 @@ const fetchData = async (url) => {
 };
 
 const getResults = async (url) => {
-  let ravenclawCharacters = {};
+  const ravenclawCharacters = {};
   const ravenclawArray = [];
   const $ = await fetchData(url);
 
   $(
     '.category-page__members > .category-page__members-for-char > .category-page__member > .category-page__member-link'
   ).each((_, element) => {
-    ravenclawCharacters = {
-      name: $(element).text(),
-      house: 'Ravenclaw',
-      gender: 'Male',
-    };
-    ravenclawArray.push(ravenclawCharacters);
+    // ! AVOIDING ERRORS VIA COMMENTING
+    // ravenclawCharacters = {
+    //   name: $(element).text(),
+    //   house: 'Ravenclaw',
+    //   gender: 'Male',
+    // };
+    // ravenclawArray.push(ravenclawCharacters);
   });
   return ravenclawArray;
 };
-
-module.exports = getResults;
+// module.exports = ravenclawArray;

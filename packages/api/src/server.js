@@ -27,7 +27,7 @@ export default async () => {
         console.log(`Server is ready at ${url}`);
       });
     });
-  } catch (e) {
-    console.error(e);
+  } catch (err) {
+    console.error('OOPS! Something went wrong!', err);
   }
 };
