@@ -1,5 +1,6 @@
 export const resolvers = {
   Query: {
+    // *  Character & Charactera Queries
     character: async (_, { name }, { Character }) => {
       try {
         return await Character.findOne({
@@ -27,6 +28,7 @@ export const resolvers = {
         return;
       }
     },
+    // *  House & Houses Queries
     house: async (_, { name }, { House }) => {
       try {
         return await House.findOne({
