@@ -41,6 +41,8 @@
     "url": "git+https://github.com/parxyHash/Harry-Potter-API.git"
   },
   "keywords": [
+    "SSR",
+    "Frontend",
     "Website",
     "Harry Potter"
   ],
