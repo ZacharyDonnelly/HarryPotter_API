@@ -1,12 +1,10 @@
 type Query {
   """
   Get a specific character by name.
-  (Some Characters who don't have a recorded house will be stored as 'Unknown')
   """
   character(name: String!): Character
   """
   Get the list of all characters ~ I would avoid filtering by actor for now until all records are fully populated with correct actor.
-  (Some Characters who don't have a recorded house will be stored as 'Unknown')
   """
   characters(page: Int, filter: FilterCharacter): [Character]
   """
@@ -26,7 +24,7 @@ type Character {
   """
   name: String
   """
-  The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw, or Unknown).
+  The house in which the character is part of: Gryffindor, Slytherin, Hufflepuff or Ravenclaw. If the character does not have a house on record or is a muggle, than thier house will reflect that and come back as Unknown or Muggle.
   """
   house: House
   """
@@ -34,7 +32,7 @@ type Character {
   """
   gender: String
   """
-  The actor who played the character. (Some character's actors may not be aggregated yet)
+  The actor who played the character. (Some character's actors may not have been aggregated yet.)
   """
   actor: String
 }
@@ -42,7 +40,7 @@ type Character {
 type House {
   id: ID
   """
-  The house in which the character is part of (Gryffindor, Slytherin, Hufflepuff, Ravenclaw).
+  The name of the house in which the characters are part of: Gryffindor, Slytherin, Hufflepuff or Ravenclaw. Characters who do not have a recorded house will be stored as Unknown, while others will be stored under Muggle.
   """
   name: String
   """

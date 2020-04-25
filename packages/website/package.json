@@ -16,6 +16,7 @@
     "apollo-client": "^2.6.8",
     "cross-env": "^7.0.2",
     "next": "^9.3.5",
+    "node-sass": "^4.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -23,6 +24,23 @@
     "dev": "next",
     "build": "next build",
     "start": "next start"
+  },
+  "eslintConfig": {
+		"extends": ["prettier", "plugin:react/recommended"]
+	},
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+		"@testing-library/react": "^10.0.3",
+		"@testing-library/user-event": "^10.1.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "jest": "^25.4.0",
+    "prettier": "^2.0.5"
   },
   "browserslist": {
     "production": [
@@ -46,5 +64,5 @@
     "Website",
     "Harry Potter"
   ],
-  "homepage": "harrypotterapi.com"
+  "homepage": "www.harrypotterapi.com"
 }

@@ -23,6 +23,9 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js"
   },
+  "eslintConfig": {
+		"extends": ["prettier", "plugin:react/recommended"]
+	},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -67,5 +70,5 @@
     "NodeJS",
     "Harry Potter"
   ],
-  "homepage": "harrypotterapi.com"
+  "homepage": "www.harrypotterapi.com"
 }
