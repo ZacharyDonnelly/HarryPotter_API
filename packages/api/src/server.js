@@ -10,24 +10,24 @@ const { sequelize, House, Character } = require('./models');
 require('dotenv').config();
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  introspection: true,
-  playground: true,
-  validationRules: depth(5),
-  context() {
-    return { House, Character };
-  },
+	typeDefs,
+	resolvers,
+	introspection: true,
+	playground: true,
+	validationRules: depth(5),
+	context() {
+		return { House, Character };
+	},
 });
 
 export default async () => {
-  try {
-    await sequelize.sync().then(() => {
-      server.listen().then(({ url }) => {
-        console.log(`Server is ready at ${url}`);
-      });
-    });
-  } catch (err) {
-    console.error('OOPS! Something went wrong!', err);
-  }
+	try {
+		await sequelize.sync().then(() => {
+			server.listen().then(({ url }) => {
+				console.log(`Server is ready at ${url}`);
+			});
+		});
+	} catch (err) {
+		console.error('OOPS! Something went wrong!', err);
+	}
 };
