@@ -2,11 +2,11 @@
 
 <hr />
 
-[The Harry Potter GraphQL API](http://harrypotterapi.com) based on the [Harry Potter](https://www.wizardingworld.com/) books' and movies'. You will have access to all data including hundreds of characters, houses, images, locations & much more!
+[The Harry Potter GraphQL API](http://harrypotterapi.com) is based on the [Harry Potter](https://www.wizardingworld.com/) series. You will have access to all data including hundreds of Characters, Houses, Images(Coming Soon!), Genders & MUCH more!
 
 <hr />
 
-### I will finish writing this up at some point soon.
+## I will finish writing this up at some point soon
 
 <hr />
 
@@ -16,6 +16,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## License
+## Copyright
 
-[BSD 3-Clause](https://opensource.org/licenses/BSD-3-Clause)
+The Harry Potter series was created by J. K. Rowling. ALL data and images are used without claim of ownership and belong to their respective owners.
+
+This API is open source and uses a [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause). All the data has been collected from open sources such as [Harry Potter Fandom Website](https://harrypotter.fandom.com/wiki).

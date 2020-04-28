@@ -2,7 +2,3 @@
 .next/*
 .gitignore
 LICENSE
-package.json
-packages/api/package.json
-packages/common/package.json
-packages/website/package.json

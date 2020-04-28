@@ -1,4 +1,6 @@
+packages/website/.next/*
 .next/*
+node_modules
 .gitignore
 LICENSE
 package.json
