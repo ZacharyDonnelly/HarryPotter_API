@@ -12,7 +12,7 @@ type Query {
 	"""
 	Get a specific character by name or actor ~ I would avoid filtering by actor for now until all records are fully populated with correct actor.
 	"""
-	character(name: String!, actor: String): Character
+	character(filter: FilterCharacter!): Character
 	"""
 	Get the list of all characters ~ I would avoid filtering by actor for now until all records are fully populated with correct actor.
 	"""
@@ -39,13 +39,13 @@ type Character {
 	"""
 	The house in which the character is part of: Gryffindor, Slytherin, Hufflepuff or Ravenclaw. If the character does not have a house on record or is a muggle, than thier house will reflect that and come back as Unknown or Muggle.
 	"""
-	house: House
+	house: String
 	"""
 	The gender of the character.
 	"""
 	gender: String
 	"""
-	The actor who played the character. (Some character's actors may not have been aggregated yet.)
+	The actor who played the character. (Some character's actors may not have been aggregated yet. Also, some characters did not appear in any of the movies.)
 	"""
 	actor: String
 }

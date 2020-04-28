@@ -1,7 +1,7 @@
 export const resolvers = {
 	Query: {
 		// *  Character & Characters Queries
-		character: async (_, { name, actor }, { Character }) => {
+		character: async (_, { filter: { name, actor } }, { Character }) => {
 			try {
 				if (name) {
 					return await Character.findOne({

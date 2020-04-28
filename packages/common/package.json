@@ -27,7 +27,10 @@
   },
   "keywords": [
     "API",
-    "GraphQL",
+		"GraphQL",
+		"SSR",
+		"NextJS",
+		"React",
     "Backend",
     "NodeJS",
     "Harry Potter"
