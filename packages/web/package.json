@@ -1,15 +1,17 @@
 {
-  "name": "@harry-potter/web",
+  "name": "@Harry-Potter/Web",
   "description": "A modern Harry Potter GraphQL API",
   "version": "1.0.0",
+  "main": "index.js",
   "author": "Hashed <z-donnelly@hvcc.edu>",
-  "license": "BSD 3-Clause",
+  "license": "BSD-3-Clause",
+  "type": "module",
   "private": true,
   "dependencies": {
+    "@Harry-Potter/API": "1.0.0",
+    "@Harry-Potter/Common": "1.0.0",
     "@apollo/react-hooks": "^3.1.5",
-    "@harry-potter/api": "1.0.0",
     "@material-ui/core": "^4.9.12",
-    "@zeit/next-sass": "^1.0.1",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
     "cross-env": "^7.0.2",
@@ -23,6 +25,9 @@
     "build": "next build",
     "start": "next start"
   },
+  "eslintConfig": {
+		"extends": ["prettier", "plugin:react/recommended"]
+	},
   "browserslist": {
     "production": [
       ">0.2%",
@@ -35,15 +40,52 @@
       "last 1 safari version"
     ]
   },
-  "repository": "git+https://github.com/parxyHash/Harry-Potter-API.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parxyHash/Harry-Potter-API.git"
+  },
   "keywords": [
     "SSR",
-    "NextJS",
-    "SEO",
-    "Open Source",
     "Frontend",
     "Website",
     "Harry Potter"
   ],
-  "main": "index.js"
+  "homepage": "www.harrypotterapi.com",
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "next start"
+	},
+	"eslintConfig": {
+		"extends": [
+			"prettier",
+			"plugin:react/recommended"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/parxyHash/Harry-Potter-API.git"
+	},
+	"keywords": [
+		"SSR",
+		"NextJS",
+		"SEO",
+		"Open Source",
+		"Frontend",
+		"Website",
+		"Harry Potter"
+	],
+	"homepage": "www.harrypotterapi.com"
 }
