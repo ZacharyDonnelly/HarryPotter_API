@@ -31,7 +31,7 @@ module.exports = {
       {
         destructuring: 'all',
       },
-    ],
+		],
     'comma-spacing': [
       'error',
       {
@@ -47,9 +47,9 @@ module.exports = {
       },
     ],
     'no-multi-spaces': 'error',
-    'no-console': 'off',
+		'no-console': 'off',
     'comma-dangle': 'off',
-    'react/prop-types': 'off',
+    'react/prop-types': 0,
     'linebreak-style': 'off',
     'indent': 'off',
     'prettier/prettier': [
