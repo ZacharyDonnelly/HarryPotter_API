@@ -1,27 +1,28 @@
 import React from 'react';
 import Layout from '../src/components/layout';
-import Button from '@material-ui/core/Button';
+import Link from 'next/link';
 
-const ContainedButtons = () => {
+const About = () => {
   return (
     <Layout title="ugh">
-      <div>
-        <Button variant="outlined">Default</Button>
-        <Button variant="outlined" color="primary">
-          Primary
-        </Button>
-        <Button variant="outlined" color="secondary">
-          Secondary
-        </Button>
-        <Button variant="outlined" disabled>
-          Disabled
-        </Button>
-        <Button variant="outlined" color="primary">
-          Link
-        </Button>
+      <div
+        style={{
+          color: '#4d4d4d',
+          fontSize: '46px',
+          fontFamily: 'Proxima nova',
+          fontWeight: 600,
+          textDecoration: 'none',
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(50%, 25%)',
+        }}>
+        <Link href="/">
+          <a>GO HOME</a>
+        </Link>
       </div>
     </Layout>
   );
 };
 
-export default ContainedButtons;
+export default About;

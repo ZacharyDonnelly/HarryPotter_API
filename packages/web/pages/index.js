@@ -1,9 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import Layout from '../components/layout';
+import Layout from '../src/components/layout';
 import * as styles from '../styles/index.module.scss';
 
-const Index = () => {
+const Home = () => {
   return (
     <Layout title="Harry Potter Api">
       <div className={styles.container}>
@@ -22,4 +22,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;

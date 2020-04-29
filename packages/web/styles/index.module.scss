@@ -16,11 +16,6 @@
     text-transform: none;
     color: #808080;
     padding: 0.85rem;
-
-    &::before {
-      content: ' ';
-      border-bottom: 1px solid #000;
-    }
   }
 
   .header {
