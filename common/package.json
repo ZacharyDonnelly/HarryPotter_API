@@ -1,0 +1,40 @@
+{
+  "name": "common",
+  "description": "A modern Harry Potter GraphQL API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Hashed <z-donnelly@hvcc.edu>",
+  "license": "BSD 3-Clause",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parxyHash/Harry-Potter-API.git"
+  },
+  "keywords": [
+    "API",
+    "GraphQL",
+    "SSR",
+    "NextJS",
+    "React",
+    "Open Source",
+    "Backend",
+    "NodeJS",
+    "Harry Potter"
+  ],
+  "homepage": "www.harrypotterapi.com"
+}
