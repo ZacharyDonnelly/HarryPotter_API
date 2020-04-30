@@ -6,8 +6,10 @@ import Routes from './routes';
 import './index.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>,
+  <ApolloProvider client={client}>
+    <React.StrictMode>
+      <Routes />
+    </React.StrictMode>
+  </ApolloProvider>,
   document.getElementById('root')
 );

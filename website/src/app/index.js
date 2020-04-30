@@ -1,9 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../components/nav';
+import gql from 'graphql-tag';
+import { useQuery } from '@apollo/react-hooks';
+import Loader from '../components/loader';
 import * as styles from './index.module.scss';
 
 const Home = () => {
+  const GET_CHAR = gql`
+    {
+      character(filter: { name: "Harry Potter" }) {
+        id
+        name
+        actor
+        house
+        gender
+      }
+    }
+  `;
+  const { data, loading, error } = useQuery(GET_CHAR);
+
+  if (loading) return <Loader />;
+  if (error) return <p>ERROR</p>;
+  if (!data) return <p>Not found</p>;
   return (
     <>
       <Nav />
@@ -15,9 +34,10 @@ const Home = () => {
             &quot;It does not do well to dwell on dreams and forget to live.&quot; -
             Albus Dumbledore.
           </h2>
-          <Link href="about">
-            <span className={styles.link}>See More &gt;</span>
+          <Link to="about" className={styles.link}>
+            See More &gt;
           </Link>
+          {data.character.name}
         </div>
       </div>
       <div className={styles.lowerWrapper}>

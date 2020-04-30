@@ -9,19 +9,19 @@ const Nav = () => {
     <div className={styles.container}>
       <Breadcrumb>
         <Breadcrumb.Section>
-          <Link href="/">
+          <Link to="/">
             <span className={styles.item}>Home</span>
           </Link>
         </Breadcrumb.Section>
         <Breadcrumb.Divider />
         <Breadcrumb.Section>
-          <Link href="/about">
+          <Link to="/about">
             <span className={styles.item}>About</span>
           </Link>
         </Breadcrumb.Section>
         <Breadcrumb.Divider />
         <Breadcrumb.Section>
-          <Link href="/documentation">
+          <Link to="/documentation">
             <span className={styles.item}>Documentation</span>
           </Link>
         </Breadcrumb.Section>

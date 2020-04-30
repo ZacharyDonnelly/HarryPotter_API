@@ -1,19 +1,19 @@
-// import { ApolloClient } from 'apollo-client';
-// import { InMemoryCache } from 'apollo-cache-inmemory';
-// import { createHttpLink } from 'apollo-link-http';
-// import { ApolloLink } from 'apollo-link';
-// import resolvers from '../../../../api/src/resolvers';
-// import typeDefs from '../../../../api/src/typeDefs';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { HttpLink } from 'apollo-link-http';
+import { ApolloLink } from 'apollo-link';
 
-// const cache = new InMemoryCache();
-// const link = createHttpLink({ uri: 'http://localhost:4000/graphql' });
+const cache = new InMemoryCache();
+const http = new HttpLink({
+  uri: 'http://localhost:4000/',
+});
 
-// const client = new ApolloClient({
-//   link,
-//   cache,
-//   typeDefs,
-//   resolvers,
-//   connectToDevTools: true,
-// });
+const link = ApolloLink.from([http]);
 
-// export default client;
+const client = new ApolloClient({
+  link,
+  cache,
+  connectToDevTools: true,
+});
+
+export default client;
