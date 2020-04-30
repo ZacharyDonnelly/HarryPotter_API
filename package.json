@@ -5,26 +5,9 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "lerna run test",
-    "dev": "lerna run dev --scope=@harry-potter/website",
-    "new-version": "lerna version",
-    "diff": "lerna diff"
+    "dev": "concurrently 'cd packages/api && yarn dev' 'cd packages/web && yarn dev'"
   },
-  "devDependencies": {
-    "lerna": "^3.20.2",
-    "@testing-library/jest-dom": "^5.5.0",
-    "@testing-library/react": "^10.0.3",
-    "@testing-library/user-event": "^10.1.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "rimraf": "^3.0.2",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "jest": "^25.5.0",
-    "prettier": "^2.0.5"
-
+  "dependencies": {
+    "concurrently": "^5.2.0"
   }
 }

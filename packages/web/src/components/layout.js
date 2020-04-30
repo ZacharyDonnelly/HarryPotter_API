@@ -7,13 +7,17 @@ export default function Layout({ children, title }) {
     <>
       <Head>
         <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
         <meta
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
         <meta name="og:title" content={title} />
         <meta name="twitter:card" content="summary_large_image" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css"
+        />
       </Head>
       <div>{children}</div>
     </>
