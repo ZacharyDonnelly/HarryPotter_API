@@ -1,14 +1,14 @@
 const fs = require('fs');
-const data = require('../data/gryffindor');
+const data = require('../data/ravenclaw');
 
 function func(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i]['actor'] = 'Not yet aggregated.';
-  }
+  arr.forEach((curr) => {
+    delete curr['img'];
+  });
   return arr;
 }
 (async () => {
   const results = func(data);
   const jsonString = JSON.stringify(results);
-  fs.writeFileSync('../data/test.js', jsonString);
+  fs.writeFileSync('../data/ravenclaw.js', jsonString);
 })();

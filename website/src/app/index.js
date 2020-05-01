@@ -23,6 +23,7 @@ const Home = () => {
   if (loading) return <Loader />;
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
+  console.log(data.character);
   return (
     <>
       <Nav />
@@ -37,7 +38,9 @@ const Home = () => {
           <Link to="about" className={styles.link}>
             See More &gt;
           </Link>
-          {data.character.name}
+          <span style={{ fontSize: 14, padding: '1rem .95rem 0 0' }}>
+            {data.character.name}
+          </span>
         </div>
       </div>
       <div className={styles.lowerWrapper}>
