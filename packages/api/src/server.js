@@ -22,7 +22,7 @@ const server = new ApolloServer({
 export default async () => {
   try {
     await sequelize.sync().then(() => {
-      server.listen().then(({ url }) => {
+      server.listen({ port: 4000 }).then(({ url }) => {
         console.log(`Server is ready at ${url}`);
       });
     });
