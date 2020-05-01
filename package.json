@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "example-monorepo",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn concurrently 'cd packages/api && yarn dev' 'cd packages/website && yarn start'"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
