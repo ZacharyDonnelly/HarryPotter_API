@@ -5,7 +5,7 @@
   -webkit-box-align: center;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 47.5vh;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@
   }
 
   .header {
-    margin: 0.5rem;
+    margin: 0.65rem;
     font-size: 36px;
     font-family: 'Proxima nova', sans-serif;
     font-weight: 600;
@@ -40,7 +40,7 @@
     color: #4d4d4d;
   }
   .subHeader {
-    margin: 0.5rem;
+    margin: 0.65rem;
     font-size: 14px;
     font-family: 'Proxima nova', sans-serif;
     font-weight: 400;
@@ -113,7 +113,7 @@
     font-weight: 400 !important;
     font-family: 'Proxima nova', sans-serif !important;
     transition: color 0.2s ease 0s;
-    border-bottom: 1px solid rgb(255, 152, 0);
+    border-bottom: 1px solid rgb(253, 210, 146);
   }
   .year {
     padding-left: 0.35rem;

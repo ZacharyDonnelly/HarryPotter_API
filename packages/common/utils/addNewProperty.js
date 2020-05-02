@@ -1,14 +1,16 @@
 const fs = require('fs');
-const data = require('../data/ravenclaw');
+const data = require();
 
 function func(arr) {
+  let id = 0;
   arr.forEach((curr) => {
-    delete curr['img'];
+    curr['id'] = id;
+    id++;
   });
   return arr;
 }
 (async () => {
   const results = func(data);
   const jsonString = JSON.stringify(results);
-  fs.writeFileSync('../data/ravenclaw.js', jsonString);
+  fs.writeFileSync(, jsonString);
 })();

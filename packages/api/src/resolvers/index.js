@@ -23,7 +23,8 @@ const resolvers = {
     },
     characters: async (_, { page, filter: { house, gender } }, { Character }) => {
       try {
-        const offsetCalc = page ? page * 10 : 0;
+        let offsetCalc;
+        page === 0 || page === 1 ? (offsetCalc = 0) : (offsetCalc = page * 10 - 10);
         if (house) {
           return await Character.findAll({
             where: {
