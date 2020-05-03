@@ -3,7 +3,8 @@ const { Schema } = mongoose;
 
 const houseSchema = new Schema({
   name: String,
-  id: Number
+  id: Number,
 });
 
-module.exports = mongoose.model('House', houseSchema);
+const House = mongoose.model('House', houseSchema);
+module.exports = House;

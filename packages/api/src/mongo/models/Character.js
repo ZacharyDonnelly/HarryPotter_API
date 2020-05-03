@@ -6,6 +6,7 @@ const characterSchema = new Schema({
   house: String,
   gender: String,
   actor: String,
-  id: Number
+  id: Number,
 });
-module.exports = mongoose.model('Character', characterSchema);
+const Character = mongoose.model('Character', characterSchema);
+module.exports = Character;

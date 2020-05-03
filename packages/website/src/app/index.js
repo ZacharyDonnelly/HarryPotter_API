@@ -41,7 +41,7 @@ const Home = () => {
         </div>
       </div>
       <span style={{ fontSize: 14, padding: '1rem .95rem 0 0' }}>
-        {data.character.name}
+        {/* {data.character.name} */}
       </span>
       <div className={styles.lowerWrapper}>
         <div className={styles.lower} style={{ margin: '0 !important' }} />
