@@ -1,48 +1,29 @@
 const resolvers = {
   Query: {
     // *  Character & Characters Queries
-    character: async (_, { filter: { name, actor } }, { Character }) => {
+    character: async (_, { filter: { name, actor } }, { Char }) => {
       try {
         if (name) {
-          return await Character.find(
-            {
-              name,
-            },
-            (err, res) => {
-              err ? console.log(err) : console.log(res);
-            }
-          );
+          const data = await Char.findOne({ name });
+          console.log(data);
+          return data;
         } else if (actor) {
-          return await Character.find(
-            {
-              actor,
-            },
-            (err, res) => {
-              err ? console.log(err) : console.log(res);
-            }
-          );
+          const data = await Char.findOne({ actor });
+          return data;
         }
       } catch (err) {
         console.error('OOPS! Something went wrong!', err);
         return;
       }
     },
-    characters: async (_, { page, filter: { house, gender } }, { Character }) => {
+    characters: async (_, { page, filter: { house, gender } }, { Char }) => {
       try {
         let offsetCalc;
         page === 0 || page === 1 ? (offsetCalc = 0) : (offsetCalc = page * 10 - 10);
         if (house) {
-          return await Character.find({
-            house,
-            limit: 10,
-            offset: offsetCalc,
-          });
+          return await Char.find({ house }).limit(10).skip(offsetCalc);
         } else if (gender) {
-          return await Character.find({
-            gender,
-            limit: 10,
-            offset: offsetCalc,
-          });
+          return await Char.find({ gender }).limit(10).skip(offsetCalc);
         }
       } catch (err) {
         console.error('OOPS! Something went wrong!', err);
@@ -52,16 +33,16 @@ const resolvers = {
     // *  House & Houses Queries
     house: async (_, { name }, { House }) => {
       try {
-        return await House.find({
-          name,
-        });
+        const data = await House.findOne({ name });
+        return data;
       } catch (err) {
         console.error('OOPS! Something went wrong!', err);
       }
     },
     houses: async (_, __, { House }) => {
       try {
-        return await House.find();
+        const data = await House.find();
+        return data;
       } catch (err) {
         console.error('OOPS! Something went wrong!', err);
       }

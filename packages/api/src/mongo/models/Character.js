@@ -1,12 +1,10 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+import mongoose from 'mongoose';
 
-const characterSchema = new Schema({
+const characterSchema = new mongoose.Schema({
   name: String,
   house: String,
   gender: String,
   actor: String,
   id: Number,
 });
-const Character = mongoose.model('Character', characterSchema);
-module.exports = Character;
+export default mongoose.model('Character', characterSchema, 'Character');

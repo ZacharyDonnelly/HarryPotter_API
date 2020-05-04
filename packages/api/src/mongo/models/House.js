@@ -1,10 +1,8 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+import mongoose from 'mongoose';
 
-const houseSchema = new Schema({
+const houseSchema = new mongoose.Schema({
   name: String,
   id: Number,
 });
 
-const House = mongoose.model('House', houseSchema);
-module.exports = House;
+export default mongoose.model('House', houseSchema, 'Houses');
