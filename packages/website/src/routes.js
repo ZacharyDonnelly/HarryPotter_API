@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './app';
-import About from './about';
-import Documentation from './documentation';
+import App from './pages/app';
+import About from './pages/about';
+import Documentation from './pages/documentation';
 
 const Routing = () => (
   <BrowserRouter>
