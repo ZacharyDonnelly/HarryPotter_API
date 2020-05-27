@@ -6,7 +6,7 @@
 
 <hr />
 
-## I will finish writing this up at some point soon
+## THIS PROJECT IS TEMPORARILY ON HOLD
 
 <hr />
 
