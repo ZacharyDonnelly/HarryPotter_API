@@ -1,6 +1,5 @@
 const fs = require('fs');
 const getResults = require('./char-scraper');
-const { slytherin, gryffindor, hufflepuff, ravenclaw } = require('../data/URIs/Uri');
 
 (async () => {
   const results = await getResults(hufflepuff);

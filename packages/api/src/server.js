@@ -1,13 +1,10 @@
-// * GraphQL Related
 import { ApolloServer } from 'apollo-server';
 import resolvers from './resolvers';
 import depth from 'graphql-depth-limit';
 import typeDefs from './typeDefs';
-// * Database Related
-import Char from './mongo/models/Character';
-import House from './mongo/models/House';
+import Char from './models/Character';
+import House from './models/House';
 import mongoose from 'mongoose';
-// * .env config Related
 require('dotenv').config();
 
 const server = new ApolloServer({

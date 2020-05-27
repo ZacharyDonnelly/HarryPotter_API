@@ -1,7 +1,7 @@
-packages/website/.next/*
-.next/*
 node_modules
 .gitignore
+build
+dist
 LICENSE
 package.json
 packages/api/package.json

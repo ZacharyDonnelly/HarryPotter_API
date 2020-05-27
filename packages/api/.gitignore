@@ -21,11 +21,10 @@ yarn-debug.log*
 yarn-error.log*
 images/
 
-*.db
-development.*
-/development.db
-development.db
-
 /config
 config/*
 /config/*
+
+/src/SQL/*
+/src/SQL
+SQL

@@ -1,24 +1,8 @@
-import * as Sequelize from 'sequelize';
+import mongoose from 'mongoose';
 
-export default (sequelize) => {
-  const House = sequelize.define(
-    'House',
-    {
-      id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-          notEmpty: true,
-        },
-      },
-    },
-    {}
-  );
-  return House;
-};
+const houseSchema = new mongoose.Schema({
+  name: String,
+  id: Number,
+});
+
+export default mongoose.model('House', houseSchema, 'Houses');

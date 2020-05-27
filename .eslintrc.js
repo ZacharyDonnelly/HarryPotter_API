@@ -19,13 +19,6 @@ module.exports = {
   },
   plugins: ['prettier','react'],
   rules: {
-    quotes: [
-      'warn',
-      'single',
-      {
-        avoidEscape: true,
-      },
-    ],
     'prefer-const': [
       'error',
       {
@@ -52,6 +45,21 @@ module.exports = {
     'react/prop-types': 0,
     'linebreak-style': 'off',
     'indent': 'off',
+    "require-await": "off",
+		"import/prefer-default-export": "off",
+		"babel/new-cap": "off",
+		"import/no-unassigned-import": "off",
+		"react/prop-types": "off",
+		"no-console": "warn",
+		"no-nested-ternary": "off",
+		"jest/no-disabled-tests": "off",
+		"complexity": [
+				"error",
+				12
+			],
+		"react/no-did-update-set-state": "off",
+		"react/prefer-stateless-function": "off",
+		"react/no-did-mount-set-state": "off",
     'prettier/prettier': [
       'warn',
       {

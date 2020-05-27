@@ -1,11 +1,12 @@
 {
   "private": true,
-  "name": "example-monorepo",
+  "name": "harry-potter_api",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev": "yarn concurrently 'cd packages/api && yarn dev' 'cd packages/website && yarn start'"
+    "dev": "yarn concurrently 'cd packages/api && yarn dev' 'cd packages/website && yarn start'",
+    "precommit": "lint-staged && yarn run --silent validate"
   },
   "dependencies": {
     "concurrently": "^5.2.0"
