@@ -1,4 +1,5 @@
 ---
+name: issue_template.md
 about: Issues, PRs or bug reports
 ---
 
