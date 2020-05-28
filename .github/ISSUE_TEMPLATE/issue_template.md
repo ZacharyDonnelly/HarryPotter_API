@@ -1,10 +1,5 @@
 ---
-name: ISSUE_TEMPLATE.md
 about: Issues, PRs or bug reports
-title: issue
-labels: ''
-assignees: ''
-
 ---
 
 <!--
